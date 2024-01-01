@@ -1,25 +1,7 @@
 {
   "formations": [
-    {
-      "titre": "eeyye",
-      "domaine": "eueue",
-      "niveau": "Débutant",
-      "description": "eueue",
-      "disponible": false,
-      "id": 1
-    }
   ],
   "sessions": [],
   "users": [
-    {
-      "nom": "yousef12",
-      "role": "Formateur",
-      "email": "youssef@gmail.com",
-      "password": "12345",
-      "formationsEnseignees": [
-        1
-      ],
-      "id": 1
-    }
   ]
 }
