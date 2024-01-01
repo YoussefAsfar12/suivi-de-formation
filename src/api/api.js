@@ -289,6 +289,19 @@ export const getUserByEmail= async (email)=>{
       throw error; 
     }
 }
+export const getFormationByTitre= async (titre)=>{
+  // console.log("getSessions");
+  
+  try {
+    const response = await axios.get(`http://localhost:8000/formations?email=${titre}`);
+    const formation = response.data
+    // console.log(formation);
+      return formation;
+    } catch (error) {
+      console.error( error);
+      throw error; 
+    }
+}
 export const getUserByName= async (name)=>{
   // console.log("getSessions");
   

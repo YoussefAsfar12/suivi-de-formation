@@ -13,6 +13,7 @@ import { useAuth } from "../../AuthContext/AuthProvider";
 import {
   AddFormation,
   DeleteFormation,
+  getFormationByTitre,
   getUserFormations,
   updateFormation,
 } from "../../api/api";
@@ -74,12 +75,17 @@ const TrainerManagementPage = () => {
   }, [user]);
 
   const handleCreateFormation = async (data) => {
-    console.log(data)
     try {
+      const formationExist= await getFormationByTitre(data.titre);
+    if (formationExist.length=== 0) {
       await AddFormation(data, updateUser, user);
       clearForm();
       const formations = await getUserFormations(user);
       setFormations(formations);
+
+    } else {
+      alert('formation already exist');
+    }
     } catch (error) {
       console.error("Error creating formation", error);
     }
