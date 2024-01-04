@@ -9,11 +9,11 @@ const getStatus = (session) => {
   const endDate = new Date(session.dateFin);
 
   if (currentDate < startDate) {
-    return 'Upcoming';
+    return 'À venir';
   } else if (currentDate >= startDate && currentDate <= endDate) {
-    return 'Ongoing';
+    return 'En cours';
   } else {
-    return 'Completed';
+    return 'Terminé';
   }
 };
 

@@ -1,25 +1,42 @@
 {
   "formations": [
     {
-      "titre": "eeyye",
-      "domaine": "eueue",
+      "titre": "Design Graphique pour le Web",
+      "domaine": "Design",
       "niveau": "Débutant",
-      "description": "eueue",
+      "description": "Techniques de design graphique appliquées à la création de sites web attractifs",
       "disponible": false,
       "id": 1
+    },
+    {
+      "titre": "Design Graphique",
+      "domaine": "Design",
+      "niveau": "Débutant",
+      "description": "Techniques de design graphique appliquées à la création de sites web attractifs",
+      "disponible": false,
+      "id": 2
     }
   ],
   "sessions": [],
   "users": [
     {
       "nom": "yousef12",
+      "role": "Participant",
+      "email": "yousef12@gmail.com",
+      "password": "12345",
+      "formationsInscrites": [],
+      "id": 1
+    },
+    {
+      "nom": "mohammed1",
       "role": "Formateur",
-      "email": "youssef@gmail.com",
+      "email": "mohammed1@gmail.com",
       "password": "12345",
       "formationsEnseignees": [
-        1
+        1,
+        2
       ],
-      "id": 1
+      "id": 2
     }
   ]
 }

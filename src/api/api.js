@@ -290,11 +290,12 @@ export const getUserByEmail= async (email)=>{
     }
 }
 export const getFormationByTitre= async (titre)=>{
-  // console.log("getSessions");
+  console.log(titre);
   
   try {
-    const response = await axios.get(`http://localhost:8000/formations?email=${titre}`);
+    const response = await axios.get(`http://localhost:8000/formations?titre=${titre}`);
     const formation = response.data
+    console.log(formation);
     // console.log(formation);
       return formation;
     } catch (error) {

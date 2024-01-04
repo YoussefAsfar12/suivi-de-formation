@@ -77,6 +77,7 @@ const TrainerManagementPage = () => {
   const handleCreateFormation = async (data) => {
     try {
       const formationExist= await getFormationByTitre(data.titre);
+      console.log(formationExist);
     if (formationExist.length=== 0) {
       await AddFormation(data, updateUser, user);
       clearForm();

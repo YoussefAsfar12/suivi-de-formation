@@ -99,7 +99,7 @@ const TrainingDetailPage = () => {
               style={{ marginTop: "16px", display:!formation.disponible}}
             >
               { isEnrolled
-                ? "Enrolled"
+                ? "Inscrit"
                 : "S'inscrire"}
             </Button>
 

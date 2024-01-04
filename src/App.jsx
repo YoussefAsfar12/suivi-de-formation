@@ -41,7 +41,7 @@ const App = () => {
             <Route element={<TrainerManagementPage />} path="/training-management"/>
           </Route>
           <Route element={<ParticipantPrivateRoutes />}>
-            <Route element={<UserDashboard />} path="/dashbord"/>
+            <Route element={<UserDashboard />} path="/dashboard"/>
           </Route>
         </Routes>
       </Router>
@@ -69,7 +69,7 @@ const FormateurPrivateRoutes = () => {
 const ParticipantPrivateRoutes = () => {
   const { user, userLoaded } = useAuth();
   if (userLoaded) {
-  const isParticipant= user && user.role === "Participant";
+    const isParticipant= user && user.role === "Participant";
   return isParticipant ? <Outlet /> : <Navigate to="/" replace />;
   }
 };

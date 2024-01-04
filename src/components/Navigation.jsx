@@ -31,14 +31,14 @@ const Navigation = () => {
   const getMenuButtons = () => {
     if (user) {
       const buttons = [
-        { label: "Home", link: "/" },
+        { label: "Accueil", link: "/" },
       ];
 
       if (user.role === "Formateur") {
         buttons.push(
-          { label: "Trainings Management", link: "/training-management" },
-          { label: "Add Session", link: "/add-session" },
-          { label: "My Formations", link: "/formations" }
+          { label: "Gestion des Formations", link: "/training-management" },
+      { label: "Ajouter une Session", link: "/add-session" },
+      { label: "Mes Formations", link: "/formations" }
         );
       } else if (user.role === "Participant") {
         buttons.push({ label: "Dashboard", link: "/dashboard" });
@@ -50,9 +50,10 @@ const Navigation = () => {
 
 
     return [
-      { label: "Home", link: "/" },
-      { label: "Register", link: "/register" },
-      { label: "Log In", link: "/login" },
+      { label: "Accueil", link: "/" },
+{ label: "S'inscrire", link: "/register" },
+{ label: "Se Connecter", link: "/login" }
+
     ];
   };
 
@@ -95,7 +96,7 @@ const Navigation = () => {
  sx={{margin:"10px 0"}}
  onClick={logout}
 >
- Log out
+Se déconnecter
 </Button>
             )}
           
@@ -131,7 +132,7 @@ const Navigation = () => {
           
             {user&& (
             <ListItemButton onClick={logout} sx={{ textDecoration: 'none', color: 'inherit' }}>
-            <ListItemText primary="Log out" />
+            <ListItemText primary="Se déconnecter" />
           </ListItemButton>
             )}
           </List>

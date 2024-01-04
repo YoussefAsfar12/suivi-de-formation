@@ -145,7 +145,7 @@ const Registration = () => {
 
         <br />
         <Button type="submit" variant="contained" color="primary">
-          Register
+        S&apos;inscrire
         </Button>
       </form>
     </Container>

@@ -59,7 +59,7 @@ const Login = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Se connecter
         </Typography>
         <form onSubmit={handleSubmit(handleLogin)}>
           <Controller
@@ -98,13 +98,13 @@ const Login = () => {
             )}
           />
           <Button fullWidth variant="contained" color="primary" type="submit">
-            Sign In
+          Se connecter
           </Button>
         </form>
         {showAlert && (
           <Alert severity="success" sx={{ mt: 2 }}>
             <AlertTitle>Login successful!</AlertTitle>
-            Welcome, {users.find((user) => user.nom === users)?.nom}!
+            Bienvenue, {users.find((user) => user.nom === users)?.nom}!
           </Alert>
         )}
       </div>
